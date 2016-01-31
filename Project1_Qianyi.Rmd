@@ -1,0 +1,13 @@
+---
+title: "Project1_Qianyi"
+author: "Qianyi Zhao"
+date: "January 28, 2016"
+output: html_document
+---
+
+```{r}
+data_proj1 <- read.csv("~/Desktop/2016Spring/EDAV/project1/Survey+Response_ModData_input.csv")
+View(data_proj1)
+table(data_proj1$Waiting.List)
+```
+
