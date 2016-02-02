@@ -155,19 +155,19 @@ def get_top_amounts(data, group_key, groups):
 The visualization results are shows as following. Notes that to let visualization makes more sense, we excluded some small categories whose count is less than 5.
 
 Average score of each skill by program. We can see many info from this picture. For example: the majority uses R and RStudio before; Data Sciene and stats masters has stronger background in C/C++ because some of them are from China where C/C++ is a required course for them in their undergraduate. Students from Data Science Certification are more likely to have background in some industry skills such as XML, dropbox, and Excel. Stats students do not so much programming background in python, command line, css (cs skills).
-![pic1](/images/figure_1.png)
+![pic1](/project_tao/images/figure_1.png)
 
 Average score of each skill by gender. Male has stronger background than female in most skills.
-![pic2](/images/figure_2.png)
+![pic2](/project_tao/images/figure_2.png)
 
 Average score of each skill by waiting list. People in waiting list are mostly from stats. So that is why they have stronger stats background but weaker programming background.
-![pic3](/images/figure_3.png)
+![pic3](/project_tao/images/figure_3.png)
 
 Interesting plots for self evaluation and confident level by program. We can see that stats people are likely to over evaluate themselves but data science students are modest. Just for fun.
-![pic4](/images/figure_4.png)
+![pic4](/project_tao/images/figure_4.png)
 
 plots for self evaluation and confident level by gender. Male intends to under evaluate themselves.
-![pic5](/images/figure_5.png)
+![pic5](/project_tao/images/figure_5.png)
 
 plots for self evaluation and confident level by gender. People in waiting list are mostly from stats and here waiting list people (yes in plot) intends to be over confident. The same result as above.
-![pic6](/images/figure_6.png)
+![pic6](/project_tao/images/figure_6.png)
