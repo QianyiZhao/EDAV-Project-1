@@ -13,7 +13,7 @@ data = rowdata.set_index(['Student ID'])
 print data['Program'].value_counts()
 print data['Gender'].value_counts()
 
-```
+#output
 IDSE (master)                 54
 Data Science Certification    22
 Statistics (master)           17
@@ -32,7 +32,7 @@ he/him            80
 she/her           32
 doesn't matter     1
 0                  1
-```
+
 
 ```
 
@@ -61,7 +61,7 @@ def mapping_func(df, mapping):
 data = mapping_func(data, mapping)
 print data['Program'].value_counts()
 
-```
+#output
 IDSE (master)                 57
 Data Science Certification    22
 Statistics (master)           17
@@ -69,7 +69,7 @@ Other masters                 11
 Ph.D.                          3
 QMSS (master)                  3
 Applied Math                   1
-```
+
 ```
 
 Then sum all skills and confident level to get total skill score(SkillVal) and self evaluation score(SelfVal). Adding these two columns into table. Moreover, set data['over_valuation'] = data['SelfVal'] - data['SkillVal']
@@ -89,7 +89,7 @@ Finally, to see the transformed data
 ```Python
 print data.head()
 
-```
+#output
                  Waiting List          Program      Matlab    R  Github  Excel  \
 Student ID                                                                      
 1                    No               IDSE (master)       0  1       0      1   
@@ -106,7 +106,7 @@ Student ID
 3                           2       14        15              -1  
 4                           0        0         6              -6  
 5                           0        7         7               0    
-```
+
 
 ```
 
