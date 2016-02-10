@@ -182,12 +182,12 @@
                 .attr("transform", function (d) {
                     return "translate(" + x(d.tool) + "," + y(y.domain()[1] - d.shiftdown) + ")";
                 });
-var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left")
-            .tickFormat(function (d) {
-                return d3.format("0")(d < 0 ? -d : d);
-            });
+        var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+                .tickFormat(function (d) {
+                    return d3.format("0")(d < 0 ? -d : d);
+                });
         svg.select(".y").transition()
                 .duration(1000).call(yAxis);
 
@@ -197,8 +197,8 @@ var yAxis = d3.svg.axis()
                 .attr("y", function (d) {
                     return y(d.y1);
                 }).attr("height", function (d) {
-                    return y(d.y0) - y(d.y1);
-                })
+            return y(d.y0) - y(d.y1);
+        })
     }
     ;
 </script>
