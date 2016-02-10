@@ -1,0 +1,67 @@
+---
+title: "Gary's part"
+author: "Gary Sztajnman"
+date: "February 7, 2016"
+output: pdf_document
+---
+
+
+Studying distribution of binary skills
+
+```{r}
+library(ggplot2)
+skills <- as.data.frame(read.table("/Users/garyair/Desktop/Dropbox/Columbia/EDA/EDAV-Project-1/data/Skills binary.csv", header=TRUE, fill = TRUE, sep=","))
+summary(skills)
+hist(skills$Count)
+
+Max_skills <- ncol(skills)-1
+Max_skills
+Nb_students <- nrow(skills)-1
+
+ggplot(skills, aes(Count, fill="#FF9999")) + geom_histogram(binwidth = 0.5)
+
+ggplot(skills, aes(Count)) + geom_bar(stat="identity", fill="#FF9999", colour="black")
+
+low_skills <- length(which(skills$Count<5))
+low_skills
+Average_skills <- length(which(skills$Count<10)) - low_skills
+Strong_skills <- length(which(skills$Count<15)) - Average_skills - low_skills
+Killer_skills <- length(which(skills$Count > 14))
+Nb_students == low_skills + Average_skills + Strong_skills + Killer_skills
+Class_skills <- c(low_skills, Average_skills, Strong_skills, Killer_skills, Nb_students)
+ggplot(data=Class_skills)
+??"ggplot"
+```
+
+
+```{r}
+library(ggplot2)
+potato<- as.data.frame(read.table("/Users/garyair/Desktop/Dropbox/Columbia/EDA/EDAV-Project-1/data/Cleaned data.csv", header=TRUE, fill = TRUE, sep=","))
+summary(potato)
+x <- potato$SumExperience
+h<-hist(x, xlim=c(0,20),breaks=10, col="blue", xlab="Number of skills from 0 to 20", main="Distribution of number of skills in class") 
+xfit<-seq(min(x),max(x),length=40) 
+yfit<-dnorm(xfit,mean=mean(x),sd=sd(x)) 
+yfit <- yfit*diff(h$mids[1:2])*length(x) 
+lines(xfit, yfit, xlim=c(0,20) ,col="red", lwd=2)
+
+apply(potato,2,sum)
+perskill <- c()
+skillset <- c()
+for(i in 5:23){
+    perskill[i-4]=length(which(potato[,i]==1))
+    skillset[i-4]=potato[0,i]
+}
+hist(perskill)
+colnames(potato[0,5:23])
+perskill
+c(potato[0,5:23][0])
+?hist
+
+proportion <- matrix(c(potato[Nb_students+1,5:23]),byrow=FALSE)
+colnames(proportion) <- c(potato[0,5:23][0])
+propotion <- as.table(proportion)
+propotion
+
+
+```
