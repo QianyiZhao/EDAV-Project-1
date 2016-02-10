@@ -37,7 +37,7 @@ def get_top_amounts(data, group_key, groups):
 
 
 
-rowdata = load_data('PATH/TO/survey.csv')
+rowdata = load_data('survey_cleaned.csv')
 
 data = rowdata.set_index(['Student ID'])
 
@@ -106,11 +106,11 @@ valuation_avg_by_waitlist = get_top_amounts(data_program_over5, 'Waiting List', 
 
 # print skillset_avg_by_program
 skillset_avg_by_program.plot(kind='barh')
-skillset_avg_by_gender.plot(kind='barh')
-skillset_avg_by_waitlist.plot(kind='barh')
-valuation_avg_by_program.plot(kind='barh')
-valuation_avg_by_gender.plot(kind='barh')
-valuation_avg_by_waitlist.plot(kind='barh')
+#skillset_avg_by_gender.plot(kind='barh')
+#skillset_avg_by_waitlist.plot(kind='barh')
+#valuation_avg_by_program.plot(kind='barh')
+#valuation_avg_by_gender.plot(kind='barh')
+#valuation_avg_by_waitlist.plot(kind='barh')
 plt.show()
 
 

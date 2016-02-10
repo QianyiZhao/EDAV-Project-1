@@ -155,7 +155,7 @@ def get_top_amounts(data, group_key, groups):
 The visualization results are shows as following. Notes that to let visualization makes more sense, we excluded some small categories whose count is less than 5.
 
 Average score of each skill by program. We can see many info from this picture. For example: the majority uses R and RStudio before; Data Sciene and stats masters has stronger background in C/C++ because some of them are from China where C/C++ is a required course for them in their undergraduate. Students from Data Science Certification are more likely to have background in some industry skills such as XML, dropbox, and Excel. Stats students do not so much programming background in python, command line, css (cs skills).
-![pic1](/project_tao/images/figure_1.png)
+![pic1](/Users/taoyu/GitHub/master/EDAV-Project-1/project_tao/images)
 
 Average score of each skill by gender. Male has stronger background than female in most skills.
 ![pic2](/project_tao/images/figure_2.png)
